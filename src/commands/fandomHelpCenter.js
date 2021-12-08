@@ -10,6 +10,9 @@ module.exports = (ctx, options) => {
         .action(({session}) => {
             daily({server: "长安"}).then(res => {
                 if (res) {
+                    session.getUser().then(user => {
+                        console.log(user)
+                    })
                     let data = res.data
                     session.send([
                         "✨ 今日日常:" + '\n'

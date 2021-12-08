@@ -10,7 +10,7 @@ public/
 /dev
 dist
 log
-
+.idea
 # Assets
 core/assets
 

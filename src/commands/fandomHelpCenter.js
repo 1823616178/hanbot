@@ -2,15 +2,21 @@
  * @module command-fandomHelpCenter
  */
 const {koishi} = require('../index')
+import {daily} from '../api/jx3'
 
-module.exports = () => {
-    koishi.command('fandom-help-center', '回应Fandom的帮助中心链接的快捷方式')
-        .alias('fandom-help')
+module.exports = (ctx, options) => {
+    koishi.command('delay', '日常')
+        .alias("delay")
         .action(({session}) => {
-            session.send(['遇到不懂的问题，可以先查看Fandom帮助中心：',
-                '• 帮助中心 https://community.fandom.com/zh/index.php?curid=2713',
-                '• 编辑入门 https://community.fandom.com/zh/index.php?curid=5075',
-                '• Wikitext https://community.fandom.com/zh/index.php?curid=6646',
-                '• Wiki设计 https://community.fandom.com/zh/index.php?curid=8373',].join('\n'))
+            daily({server: "长安"}).then(res => {
+                if (res) {
+                    let data = res.data
+                    session.send([
+                        "✨ 今日日常:" + '\n'
+                        + '今天是' + data.date + "星期" + data.week + '\n'
+                        + "大战本是:" + data.dayWar,
+                    ])
+                }
+            })
         })
 }

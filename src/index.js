@@ -23,10 +23,11 @@ require('koishi-adapter-onebot')
 // App
 const koishi = new App(koishiConfig)
 // Database
-
 // Hack QQ channel
 // koishi.plugin(require('./plugins/qq-channel-patch'), {})
-
+koishi.plugin(require('koishi-plugin-mysql'), {
+    host: "rymaker.cn", port: "46812", user: "sun", password: "550312171", database: "ruoyi"
+})
 /**
  * @module autoLoads
  */

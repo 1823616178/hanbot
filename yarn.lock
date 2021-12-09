@@ -1588,6 +1588,15 @@
     "@types/mysql" "^2.15.19"
     "mysql" "^2.18.1"
 
+"koishi-plugin-webui@^4.7.1":
+  "integrity" "sha1-QKWMfGIfoY2hdGn8IfwnF1JptlM="
+  "resolved" "https://registry.npmmirror.com/koishi-plugin-webui/download/koishi-plugin-webui-4.7.1.tgz"
+  "version" "4.7.1"
+  dependencies:
+    "semver" "^7.3.5"
+    "systeminformation" "^5.8.7"
+    "ws" "^8.2.1"
+
 "koishi-utils@^4.2.3", "koishi-utils@^4.3.0":
   "integrity" "sha1-FL0pAzUW9lJ/PwT2ZMXsHuEkTYI="
   "resolved" "https://registry.nlark.com/koishi-utils/download/koishi-utils-4.3.0.tgz"
@@ -2036,6 +2045,13 @@
   dependencies:
     "lru-cache" "^6.0.0"
 
+"semver@^7.3.5":
+  "integrity" "sha1-C2Ich5NI2JmOSw5L6Us/EuYBjvc="
+  "resolved" "https://registry.nlark.com/semver/download/semver-7.3.5.tgz"
+  "version" "7.3.5"
+  dependencies:
+    "lru-cache" "^6.0.0"
+
 "setprototypeof@1.2.0":
   "integrity" "sha1-ZsmiSnP5/CjL5msJ/tPTPcrxtCQ="
   "resolved" "https://registry.npm.taobao.org/setprototypeof/download/setprototypeof-1.2.0.tgz"
@@ -2147,6 +2163,11 @@
   "version" "8.1.1"
   dependencies:
     "has-flag" "^4.0.0"
+
+"systeminformation@^5.8.7":
+  "integrity" "sha512-hbJtPsG63PCst4PLXFq8hycbkeR5oGDquRowfLK0gNX7nJ1qx3tCbsWu83OL4GP1dkcLMKsVooLUn5x2K1Epgg=="
+  "resolved" "https://registry.npmmirror.com/systeminformation/download/systeminformation-5.9.17.tgz"
+  "version" "5.9.17"
 
 "to-fast-properties@^1.0.3":
   "integrity" "sha1-uDVx+k2MJbguIxsG46MFXeTKGkc="
@@ -2296,6 +2317,11 @@
   "integrity" "sha512-6GLgCqo2cy2A2rjCNFlxQS6ZljG/coZfZXclldI8FB/1G3CCI36Zd8xy2HrFVACi8tfk5XrgLQEk+P0Tnz9UcA=="
   "resolved" "https://registry.npmmirror.com/ws/download/ws-7.5.6.tgz"
   "version" "7.5.6"
+
+"ws@^8.2.1":
+  "integrity" "sha512-Gs5EZtpqZzLvmIM59w4igITU57lrtYVFneaa434VROv4thzJyV6UjIL3D42lslWlI+D4KzLYnxSwtfuiO79sNw=="
+  "resolved" "https://registry.npmmirror.com/ws/download/ws-8.3.0.tgz"
+  "version" "8.3.0"
 
 "xdg-basedir@^4.0.0":
   "integrity" "sha1-S8jZmEQDaWIl74OhVzy7y0552xM="

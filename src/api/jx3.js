@@ -7,6 +7,8 @@ import request from "../utils/request";
  */
 export function daily(query) {
     return request({
-        url: "/app/daily", method: "POST", data: query
+        url: "/app/daily",
+        method: "POST",
+        data: query
     })
 }

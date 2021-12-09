@@ -1,13 +1,4 @@
 /**
- * @name Chatbot-SILI 万界规划局QQ机器人
- * @author 机智的小鱼君 dragon-fish[at]qq.com
- *
- * @description Wjghj Project QQ机器人
- *
- * @license MIT
- */
-
-/**
  * @dependencies 导入依赖
  */
 const {App} = require('koishi') // koishi 机器人库
@@ -28,12 +19,12 @@ const koishi = new App(koishiConfig)
 koishi.plugin(require('koishi-plugin-mysql'), {
     host: "rymaker.cn", port: "46812", user: "sun", password: "550312171", database: "ruoyi"
 })
+
 /**
  * @module autoLoads
  */
 require('./commands/_index')
 require('./modules/_index')
-
 koishi.start().then(() => {
     sysLog('🌈', 'Koishi 启动成功')
 })

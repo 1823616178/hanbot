@@ -3,9 +3,8 @@
  */
 const {App} = require('koishi') // koishi 机器人库
 const koishiConfig = require('./koishi.config')
-// const password = require('./secret/password')
 const sysLog = require('./utils/sysLog') // sysLog 保存日志
-
+const {resolve} = require("path")
 /**
  * @instance App koishi实例
  */
@@ -19,6 +18,7 @@ const koishi = new App(koishiConfig)
 koishi.plugin(require('koishi-plugin-mysql'), {
     host: "rymaker.cn", port: "46812", user: "sun", password: "550312171", database: "ruoyi"
 })
+koishi.plugin(require('koishi-plugin-schedule'))
 
 /**
  * @module autoLoads

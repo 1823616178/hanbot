@@ -1,8 +1,8 @@
 import axios from 'axios'
 
 const servcie = axios.create({
-    baseURL: "http://172.28.40.30:8880",
-    timeout: 10000
+    baseURL: "http://172.28.152.142:8880",
+    timeout: 100000
 })
 
 servcie.interceptors.request.use(config => {
@@ -19,10 +19,8 @@ servcie.interceptors.request.use(config => {
 })
 
 servcie.interceptors.response.use(res => {
-    const code = res.data.code
     return res.data
 }, error => {
-    console.log('err', error)
     return Promise.reject(error)
 })
 

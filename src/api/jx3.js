@@ -9,6 +9,19 @@ export function daily(query) {
     return request({
         url: "/jx3/daily",
         method: "POST",
-        data: query
+        params: query
+    })
+}
+
+/***
+ * 检查服务器是否开启
+ * @param query
+ * @returns {AxiosPromise}
+ */
+export function checkServer(query) {
+    return request({
+        url: "/jx3/chack",
+        method: 'post',
+        params: query
     })
 }

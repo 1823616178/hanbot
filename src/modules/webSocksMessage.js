@@ -18,9 +18,9 @@ module.exports = () => {
             if (message.type === 'utf8') {
                 console.log("Received: '" + message.utf8Data + "'");
                 let e = JSON.parse(message.utf8Data)
-                let data = message.utf8Data.data
-                koishi.bots[0].sendMessage('792469853', "恭喜!\n" + data.server + "的" + data.name + "触发了" + data.serendipity + '\n' + '恭喜这个剑.......三玩家')
-                if (message.utf8Data.type === 2003) {
+                let data = e.data
+                if (e.type === 2003) {
+                    koishi.bots[0].sendMessage('792469853', "恭喜!\n" + data.server + "的玩家$" + data.name + "$触发了" + data.serendipity + '\n' + '恭喜这个剑.......三玩家')
                 }
             }
         });

@@ -6,10 +6,15 @@ const agent = new https.Agent({
 })
 
 module.exports = {
-    port: 46980, selfUrl: 'https://sili.wjghj.cn', // 定义机器人账号
-    host: "0.0.0.0", bots: [// QQ
+    port: 46880,
+    selfUrl: '3185128029', // 定义机器人账号
+    host: "127.0.0.1",
+    bots: [// QQ
         {
-            type: 'onebot:ws-reverse', server: 'ws://127.0.0.1:46980', token: "550312171", selfId: "3185128029",
+            type: 'onebot:ws-reverse',
+            server: 'ws://127.0.0.1:46880',
+            token: "550312171",
+            selfId: "3185128029",
         },], // 昵称
     nickname: 'hanbot', // 指令前缀
     prefix(session) {

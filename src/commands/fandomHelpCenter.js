@@ -8,12 +8,10 @@ module.exports = () => {
     koishi
         .command('delay', '日常')
         .action(async ({session}) => {
-            await daily({server: "长安"}).then(res => {
+            let time = new Date().format('yyyy-MM-dd')
+            await daily({server: "长安", time: time}).then(res => {
                 if (res) {
-                    let data = res.data
-                    session.send(["✨ 今日日常:" + '\n'
-                    + '今天是' + data.date + "星期" + data.week + '\n'
-                    + "大战本是:" + data.dayWar])
+                  console.log(res.server)
                 }
             })
         })

@@ -1,7 +1,7 @@
 import axios from 'axios'
 
 const servcie = axios.create({
-    baseURL: "https://www.jx3api.com",
+    baseURL: "http://172.28.40.30:8880",
     timeout: 10000
 })
 

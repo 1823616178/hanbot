@@ -18,6 +18,7 @@ const koishi = new App(koishiConfig)
 koishi.plugin(require('koishi-plugin-mysql'), {
     host: "rymaker.cn", port: "46812", user: "sun", password: "550312171", database: "ruoyi"
 })
+
 koishi.plugin(require('koishi-plugin-schedule'))
 
 /**
@@ -25,6 +26,7 @@ koishi.plugin(require('koishi-plugin-schedule'))
  */
 require('./commands/_index')
 require('./modules/_index')
+const {WsClient} = require("koishi-adapter-onebot");
 koishi.start().then(() => {
     sysLog('🌈', 'Koishi 启动成功')
 })

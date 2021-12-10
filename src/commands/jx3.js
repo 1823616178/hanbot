@@ -31,7 +31,6 @@ module.exports = () => {
     /***
      * 开服检测
      */
-
     koishi
         .command("jx3_chack")
         .alias('开服检测')

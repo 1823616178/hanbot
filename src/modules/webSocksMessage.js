@@ -1,6 +1,7 @@
 var WebSocketClient = require('websocket').client;
 var client = new WebSocketClient();
 const {koishi} = require('../index')
+
 module.exports = () => {
     client.on('connectFailed', function (error) {
         console.log('Connect Error: ' + error.toString());
@@ -16,7 +17,11 @@ module.exports = () => {
         connection.on('message', function (message) {
             if (message.type === 'utf8') {
                 console.log("Received: '" + message.utf8Data + "'");
-                koishi.bots[0].sendMessage(792469853, '1312')
+                let e = JSON.parse(message.utf8Data)
+                let data = message.utf8Data.data
+                koishi.bots[0].sendMessage('792469853', "恭喜!\n" + data.server + "的" + data.name + "触发了" + data.serendipity + '\n' + '恭喜这个剑.......三玩家')
+                if (message.utf8Data.type === 2003) {
+                }
             }
         });
 

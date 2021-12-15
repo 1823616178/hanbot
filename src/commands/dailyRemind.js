@@ -2,7 +2,7 @@ const {koishi} = require('../index')
 const {segment} = require('koishi-utils')
 const {onebot} = require('../utils/bots')
 module.exports = () => {
-    koishi.command("alarmClock")
+    koishi.command("alarmClock").alias("喊湘怡起床")
         .action(({session}) => {
             koishi.bots[0].sendPrivateMessage('2787200983', "猪猪猪猪猪猪猪起床")
             /*let botList = koishi.bots[0].getGroupMemberMap("792469853").then(res => {

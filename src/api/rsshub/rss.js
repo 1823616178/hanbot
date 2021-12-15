@@ -1,4 +1,4 @@
-import request from "../../utils/request_rss";
+import request from "../../utils/request";
 
 /***
  * UP 主投稿

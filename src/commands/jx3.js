@@ -14,6 +14,7 @@ module.exports = () => {
         .action(({args, session}) => {
             let time = new Date().format('yyyy-MM-dd')
             let user = koishi.database.getUser()
+            console.log(user)
             if (args.length === 0) {
                 session.send("请输入区服")
             } else {
@@ -27,7 +28,6 @@ module.exports = () => {
                 })
             }
         })
-
     /***
      * 开服检测
      */

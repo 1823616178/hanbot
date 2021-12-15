@@ -1,7 +1,7 @@
 import axios from 'axios'
 
 const servcie = axios.create({
-    baseURL: "http://rymaker.cn:46828",
+    baseURL: "http://rymaker.cn:46827",
     timeout: 100000
 })
 

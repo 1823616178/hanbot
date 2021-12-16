@@ -5,7 +5,6 @@ const {App} = require('koishi') // koishi 机器人库
 const koishiConfig = require('./koishi.config')
 const sysLog = require('./utils/sysLog') // sysLog 保存日志
 const {resolve} = require("path")
-
 /**
  * @instance App koishi实例
  */

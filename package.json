@@ -11,6 +11,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@vitejs/plugin-vue": "^2.0.1",
     "axios": "^0.24.0",
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.3",
@@ -19,12 +20,14 @@
     "koishi-adapter-onebot": "^3.1.0",
     "koishi-plugin-common": "^4.3.5",
     "koishi-plugin-mysql": "^3.6.2",
+    "koishi-plugin-rss": "^2.0.2",
     "koishi-plugin-schedule": "^3.0.7",
-    "koishi-plugin-webui": "^4.7.1",
+    "koishi-plugin-webui": "4.1.0",
     "koishi-utils": "^4.3.0",
     "mysql2": "^2.3.3",
     "nodemon": "^2.0.15",
     "sequelize": "^6.12.0-beta.1",
+    "vite": "^2.7.2",
     "websocket": "^1.0.34"
   },
   "devDependencies": {

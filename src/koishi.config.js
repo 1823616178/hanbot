@@ -7,8 +7,16 @@ const agent = new https.Agent({
 
 module.exports = {
     port: 46880,
-    selfUrl: '3185128029', // 定义机器人账号
+    selfUrl: 'http://127.0.0.1:46880',
     host: "127.0.0.1",
+    plugins: {
+        'webui': {
+            title: "Console",
+            selfUrl: 'http://127.0.0.1:48869',
+            uiPath: "/console",
+            devMode: true,
+        },
+    },
     bots: [// QQ
         {
             type: 'onebot:ws-reverse',
